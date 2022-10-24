@@ -1,0 +1,2 @@
+## Preface
+In order to set up project to run correctly, you should configure 'includes/config.php' to have the correct database credentials, create a database that matches the credentials, and upload 'sql/tables.sql' to set up tables.

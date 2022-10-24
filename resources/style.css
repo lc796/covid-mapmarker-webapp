@@ -1,0 +1,289 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+.head-container {
+    background-color: rgb(173, 185, 202);
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.header {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 2px rgb(92, 99, 110)
+}
+
+.menu {
+    overflow: hidden;
+}
+
+.menu a {
+    background-color: rgb(173, 185, 202);
+    color: #000000;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.menu a:hover {
+    background-color: rgb(132, 151, 176);
+}
+
+.menu a.current {
+    background-color: rgb(132, 151, 176);
+}
+
+.menu .empty {
+    background-color: rgb(173, 185, 202);
+    padding: 100%;
+}
+
+.main {
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+.main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; /* make this pseudo element sit below content */
+    background: no-repeat center / 40% url(watermark.png);
+    opacity: 0.3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.login-register-form {
+    text-align: center;
+    display: flex;
+    padding: 13vh 39vw;
+    flex-direction: column;
+}
+
+.login-register-form input {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.username-password-fields {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-width: thin;
+}
+
+.add-visit-field {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.add-visit-button {
+    width: 100%;
+    margin: 0 0 10px 0 !important;
+}
+
+.add-visit-padding {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    /*margin-top: 85% !important;*/
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
+button {
+    padding: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px;
+    border-width: thin;
+    background-color: white;
+    margin: 10px;
+}
+
+#register {
+    width: 95%;
+}
+
+#login, #cancel {
+    width: 45%;
+}
+
+.aligned-horizontal-buttons {
+    display: flex;
+}
+
+.status {
+    display: grid;
+    grid-template-areas:
+        'status-header status-header'
+        'status-text status-image';
+    padding: 0 25vw;
+}
+
+.status-header {
+    grid-area: status-header;
+}
+
+.status-text {
+    grid-area: status-text;
+}
+
+.status-map {
+    grid-area: status-image;
+}
+
+.settings {
+    display: grid;
+    grid-template-areas:
+        'status-header status-header'
+        'settings-info settings-info'
+        'settings-form settings-form';
+    padding: 0 25vw;
+}
+
+.settings-form {
+    grid-area: settings-form;
+    text-align: center;
+}
+
+.settings-form-grid {
+    display: grid;
+    grid-template-areas: 
+        'settings-form-window settings-form-window'
+        'settings-form-distance settings-form-distance'
+        'settings-form-report-cancel settings-form-report-cancel';
+}
+
+.settings-form-report-cancel {
+    grid-area: settings-form-report-cancel;
+    display: block;
+}
+
+.settings-info {
+    grid-area: settings-info;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.settings-form-window {
+    grid-area: settings-form-window;
+    margin-bottom: 15px;
+}
+
+.settings-form-distance {
+    grid-area: settings-form-distance;
+}
+
+.report {
+    grid-area: report;
+    width: 25%;
+    float: left;
+}
+
+#window {
+    padding: 12px 97px 12px 97px;
+}
+
+.cancel-grid {
+    grid-area: cancel;
+    width: 25% !important;
+    float: right;
+}
+
+#map {
+    width: auto;
+    height: 500px;
+    border: 3px solid black;
+}
+
+#table-heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: normal;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    color: black; /* for old browsers */
+    background-color: black;
+}
+
+.status-text-wrapper {
+    position: relative;
+    min-height: 500px;
+    min-width: 240px;
+}
+
+.status-text-top {
+    position: absolute;
+}
+
+.status-text-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#marker {
+    display: none;
+    position: absolute;
+    height: 30px;
+    width: auto;
+}
+
+.map-wrapper {
+    position: relative;
+}
+
+.overview-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 50px !important;
+}
+
+.field {
+    padding: 4px 30px 4px 30px;
+}
